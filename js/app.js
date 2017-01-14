@@ -1,0 +1,1 @@
+var suvivorApp = angular.module('zssnfront', ['ngRoute','ngMap','ngModal']);

@@ -1,0 +1,75 @@
+
+<h3>Adicione um sobrevivente:</h3>
+<div style="margin-top: 40px" class="row" >
+<modal-dialog show='dialogShown' dialog-title='My Dialog' height='400px' width='75%'>
+  <p>Dialog content goes in here</p>
+</modal-dialog>
+<div class="row">
+  <div class="col-sm-4">
+  <label for="name">Nome:</label>
+  <input id="name" ng-model="Nome" type="text" class="form-control" name="">
+  </div>
+  <div class="col-sm-4">
+  <label for="age">Idade:</label>
+ <input id="age" ng-model="Idade" class="form-control" type="number" name="">
+  </div>
+</div>
+
+
+
+ <div style="margin-top: 40px" class="row">
+ <div class="col-sm-4">
+  <input type="radio" ng-model="Sexo" name="gender" value="M"> Masculino<br>
+  <input type="radio" ng-model="Sexo" name="gender" value="F"> Feminino<br>
+  </div>
+ </div>
+
+ </br>
+
+ 
+ <div style="margin-top: 40px" class="row">
+ <div class="col-sm-3">
+
+ <button type="button" class="btn btn-outline-primary" ng-click="Remove('water')"><i class="fa fa-minus"></i></button>      
+<button type="button" class="btn btn-primary" >Water {{qntAgua}}</button>
+<button type="button" class="btn btn-outline-primary" ng-click="Add('water')"><i class="fa fa-plus"></i></button>      
+</div>
+<div class="col-sm-3">
+ <button type="button" class="btn btn-outline-success" ng-click="Remove('food')"><i class="fa fa-minus"></i></button>      
+<button type="button" class="btn btn-success" >Food {{qntFood}}</button>
+<button type="button" class="btn btn-outline-success" ng-click="Add('food')"><i class="fa fa-plus"></i></button>          
+</div>
+<div class="col-sm-3">
+ <button type="button" class="btn btn-outline-info" ng-click="Remove('med')"><i class="fa fa-minus"></i></button>      
+<button type="button" class="btn btn-info">Medication {{qntMed}}</button>
+<button type="button" class="btn btn-outline-info" ng-click="Add('med')"><i class="fa fa-plus"></i></button>            
+</div>
+<div class="col-sm-3">
+ <button type="button" class="btn btn-outline-warning" ng-click="Remove('ammo')"><i class="fa fa-minus"></i></button>      
+<button type="button" class="btn btn-warning" >Ammo {{qntAmmo}}</button>
+<button type="button" class="btn btn-outline-warning" ng-click="Add('ammo')"><i class="fa fa-plus"></i></button>         
+</div>
+
+
+</div>
+
+<div style="margin-top: 40px" class="row">
+MAPA
+
+ <ng-map center="-16.71775457647648,-49.26544189453125" zoom="4" on-click="getpos($event)">
+      <marker position="{{latlng}}" title="Hello World!" on-dragend="getpos($event)" 
+        animation="Animation.BOUNCE" animation="DROP" draggable="true"></marker>
+    </ng-map>
+    {{latlng}}
+</div>
+
+<div style="margin-top: 40px" class="row-fluid">
+<button style="width: 100%;display: block;" ng-click="Teste(Nome,Idade,Sexo)" type="button" class="btn btn-danger">Cadastrar</button>
+</div>
+
+
+</div>
+
+
+
+

@@ -1,0 +1,312 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+ body {
+    overflow-x: hidden;
+    font-family: Calibri;
+ }
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+/*Bootstrap button outline override*/
+.btn-outline-primary {
+  color: #0275d8;
+  background-image: none;
+  background-color: transparent;
+  border-color: #0275d8;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
+          box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
+}
+
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  color: #0275d8;
+  background-color: transparent;
+}
+
+.btn-outline-primary:active, .btn-outline-primary.active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+
+.btn-outline-secondary {
+  color: #ccc;
+  background-image: none;
+  background-color: transparent;
+  border-color: #ccc;
+}
+
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+
+.btn-outline-secondary:focus, .btn-outline-secondary.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
+          box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
+}
+
+.btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
+  color: #ccc;
+  background-color: transparent;
+}
+
+.btn-outline-secondary:active, .btn-outline-secondary.active,
+.show > .btn-outline-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+
+.btn-outline-info {
+  color: #5bc0de;
+  background-image: none;
+  background-color: transparent;
+  border-color: #5bc0de;
+}
+
+.btn-outline-info:hover {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+
+.btn-outline-info:focus, .btn-outline-info.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(91, 192, 222, 0.5);
+          box-shadow: 0 0 0 2px rgba(91, 192, 222, 0.5);
+}
+
+.btn-outline-info.disabled, .btn-outline-info:disabled {
+  color: #5bc0de;
+  background-color: transparent;
+}
+
+.btn-outline-info:active, .btn-outline-info.active,
+.show > .btn-outline-info.dropdown-toggle {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+
+.btn-outline-success {
+  color: #5cb85c;
+  background-image: none;
+  background-color: transparent;
+  border-color: #5cb85c;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.btn-outline-success:focus, .btn-outline-success.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.5);
+          box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.5);
+}
+
+.btn-outline-success.disabled, .btn-outline-success:disabled {
+  color: #5cb85c;
+  background-color: transparent;
+}
+
+.btn-outline-success:active, .btn-outline-success.active,
+.show > .btn-outline-success.dropdown-toggle {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.btn-outline-warning {
+  color: #f0ad4e;
+  background-image: none;
+  background-color: transparent;
+  border-color: #f0ad4e;
+}
+
+.btn-outline-warning:hover {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+.btn-outline-warning:focus, .btn-outline-warning.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(240, 173, 78, 0.5);
+          box-shadow: 0 0 0 2px rgba(240, 173, 78, 0.5);
+}
+
+.btn-outline-warning.disabled, .btn-outline-warning:disabled {
+  color: #f0ad4e;
+  background-color: transparent;
+}
+
+.btn-outline-warning:active, .btn-outline-warning.active,
+.show > .btn-outline-warning.dropdown-toggle {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+.btn-outline-danger {
+  color: #d9534f;
+  background-image: none;
+  background-color: transparent;
+  border-color: #d9534f;
+}
+
+.btn-outline-danger:hover {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.btn-outline-danger:focus, .btn-outline-danger.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(217, 83, 79, 0.5);
+          box-shadow: 0 0 0 2px rgba(217, 83, 79, 0.5);
+}
+
+.btn-outline-danger.disabled, .btn-outline-danger:disabled {
+  color: #d9534f;
+  background-color: transparent;
+}
+
+.btn-outline-danger:active, .btn-outline-danger.active,
+.show > .btn-outline-danger.dropdown-toggle {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
